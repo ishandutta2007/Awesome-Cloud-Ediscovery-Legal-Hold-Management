@@ -1,6 +1,6 @@
 # Awesome-Cloud-Ediscovery-Legal-Hold-Management
 
-# Top Cloud eDiscovery & Legal Hold Management Ecosystem
+## Top Cloud eDiscovery & Legal Hold Management Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on Electronic Discovery, Legal Hold Automation & Defensible Preservation Workflows*  
