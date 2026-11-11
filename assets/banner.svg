@@ -1,0 +1,178 @@
+<svg fill="none" viewBox="0 0 1200 420" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0d1527"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="50%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <!-- Dynamic Glowing Filter -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glow-purple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.45"/>
+    </pattern>
+
+    <style>
+      .glow-pulse-1 {
+        animation: pulse1 6s ease-in-out infinite alternate;
+      }
+      .glow-pulse-2 {
+        animation: pulse2 8s ease-in-out infinite alternate;
+      }
+      .stream-flow {
+        stroke-dasharray: 8 16;
+        animation: flowDash 20s linear infinite;
+      }
+      .beacon {
+        animation: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+      }
+      .pill-float {
+        animation: floatPill 5s ease-in-out infinite alternate;
+      }
+      @keyframes pulse1 {
+        0% { transform: scale(1) translate(0, 0); opacity: 0.35; }
+        100% { transform: scale(1.25) translate(40px, -20px); opacity: 0.65; }
+      }
+      @keyframes pulse2 {
+        0% { transform: scale(1) translate(0, 0); opacity: 0.25; }
+        100% { transform: scale(1.3) translate(-30px, 30px); opacity: 0.55; }
+      }
+      @keyframes flowDash {
+        to { stroke-dashoffset: -1000; }
+      }
+      @keyframes ping {
+        0% { r: 4px; opacity: 1; }
+        75%, 100% { r: 16px; opacity: 0; }
+      }
+      @keyframes floatPill {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(-6px); }
+      }
+    </style>
+  </defs>
+
+  <!-- Deep Canvas Base -->
+  <rect width="1200" height="420" rx="16" fill="url(#bg-grad)"/>
+
+  <!-- Background Cyber Grid -->
+  <rect width="1200" height="420" rx="16" fill="url(#cyber-grid)"/>
+
+  <!-- Animated Glowing Orbs (Deep in background so text is 100% crisp) -->
+  <g>
+    <circle cx="200" cy="120" r="140" fill="#3b82f6" filter="url(#glow-purple)" class="glow-pulse-1" />
+    <circle cx="1020" cy="300" r="160" fill="#8b5cf6" filter="url(#glow-purple)" class="glow-pulse-2" />
+    <circle cx="950" cy="90" r="90" fill="#06b6d4" filter="url(#glow-cyan)" class="glow-pulse-1" />
+  </g>
+
+  <!-- Dynamic Circuit / Discovery Path Waves in Background -->
+  <g opacity="0.35">
+    <path d="M 0 320 Q 300 240 600 330 T 1200 260" fill="none" stroke="#38bdf8" stroke-width="2" class="stream-flow" />
+    <path d="M 0 360 Q 400 300 800 370 T 1200 330" fill="none" stroke="#a855f7" stroke-width="1.5" class="stream-flow" />
+  </g>
+
+  <!-- Subtle Data / Chain of Custody Nodes in Background -->
+  <g opacity="0.4">
+    <line x1="880" y1="180" x2="1080" y2="180" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 4" />
+    <circle cx="880" cy="180" r="4" fill="#38bdf8" />
+    <circle cx="980" cy="180" r="5" fill="#818cf8" />
+    <circle cx="1080" cy="180" r="4" fill="#c084fc" />
+    <circle cx="980" cy="180" r="10" fill="none" stroke="#818cf8" class="beacon" />
+  </g>
+
+  <!-- Top Decorative Pill / Category Tag -->
+  <g transform="translate(60, 48)">
+    <rect width="270" height="32" rx="16" fill="#1e293b" stroke="#3b82f6" stroke-width="1.2" stroke-opacity="0.8"/>
+    <circle cx="18" cy="16" r="4.5" fill="#10b981" />
+    <circle cx="18" cy="16" r="8" fill="none" stroke="#10b981" stroke-width="1.2" class="beacon" />
+    <text x="34" y="21" fill="#93c5fd" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="1.2">ENTERPRISE LEGALTECH &amp; GRC</text>
+  </g>
+
+  <!-- MAIN FOREGROUND CONTENT (Guaranteed high-contrast & sharp) -->
+  <!-- Main Title -->
+  <text x="60" y="142" fill="url(#text-grad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="800" letter-spacing="-0.5">
+    Cloud eDiscovery &amp; Legal Hold
+  </text>
+
+  <!-- Subtitle -->
+  <text x="60" y="184" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="500">
+    Curated Hub of SaaS Platforms &amp; Open-Source Preservation Infrastructure
+  </text>
+
+  <!-- Tagline / Mission -->
+  <text x="60" y="218" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="400">
+    Empowering Legal Ops, IT Compliance &amp; Forensic Teams with Defensible ESI Workflows
+  </text>
+
+  <!-- Interactive / Modern Feature Badges (Foreground Floating Row) -->
+  <g transform="translate(60, 260)" class="pill-float">
+    <!-- Feature 1: Legal Hold Automation -->
+    <g transform="translate(0, 0)">
+      <rect width="250" height="74" rx="12" fill="url(#card-grad)" stroke="#334155" stroke-width="1.2"/>
+      <rect x="14" y="16" width="42" height="42" rx="8" fill="#0284c7" fill-opacity="0.2" stroke="#38bdf8" stroke-width="1"/>
+      <!-- Lock / Legal Hold Icon -->
+      <path d="M35 30 V26 A6 6 0 0 0 23 26 V30 M21 30 H37 A2 2 0 0 1 39 32 V43 A2 2 0 0 1 37 45 H21 A2 2 0 0 1 19 43 V32 A2 2 0 0 1 21 30 Z" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <text x="68" y="34" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700">Legal Hold Ops</text>
+      <text x="68" y="52" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5">Defensible Custodian Notices</text>
+    </g>
+
+    <!-- Feature 2: In-Place Preservation -->
+    <g transform="translate(268, 0)">
+      <rect width="250" height="74" rx="12" fill="url(#card-grad)" stroke="#334155" stroke-width="1.2"/>
+      <rect x="14" y="16" width="42" height="42" rx="8" fill="#7c3aed" fill-opacity="0.2" stroke="#a78bfa" stroke-width="1"/>
+      <!-- Cloud / In-Place Icon -->
+      <path d="M23 40 A5 5 0 0 1 23 30 A8 8 0 0 1 38 29 A6 6 0 0 1 40 40 Z" stroke="#c084fc" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <text x="68" y="34" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700">Cloud Preservation</text>
+      <text x="68" y="52" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5">In-Place ESI &amp; SaaS Ingestion</text>
+    </g>
+
+    <!-- Feature 3: GenAI & Early Case Assessment -->
+    <g transform="translate(536, 0)">
+      <rect width="250" height="74" rx="12" fill="url(#card-grad)" stroke="#334155" stroke-width="1.2"/>
+      <rect x="14" y="16" width="42" height="42" rx="8" fill="#059669" fill-opacity="0.2" stroke="#34d399" stroke-width="1"/>
+      <!-- AI / Sparkle / Analytics Icon -->
+      <path d="M35 22 L37 28 L43 30 L37 32 L35 38 L33 32 L27 30 L33 28 Z M24 35 L25 39 L29 40 L25 41 L24 45 L23 41 L19 40 L23 39 Z" stroke="#34d399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <text x="68" y="34" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700">GenAI &amp; ECA Review</text>
+      <text x="68" y="52" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5">Predictive Coding &amp; Forensics</text>
+    </g>
+
+    <!-- Feature 4: Open Source & Self-Hosted -->
+    <g transform="translate(804, 0)">
+      <rect width="276" height="74" rx="12" fill="url(#card-grad)" stroke="#334155" stroke-width="1.2"/>
+      <rect x="14" y="16" width="42" height="42" rx="8" fill="#ea580c" fill-opacity="0.2" stroke="#fb923c" stroke-width="1"/>
+      <!-- Terminal / Open Source Icon -->
+      <path d="M22 26 L29 32 L22 38 M30 38 H38" stroke="#fb923c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <text x="68" y="34" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700">Open-Source Engines</text>
+      <text x="68" y="52" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5">Zero Per-GB Vendor Lock-in</text>
+    </g>
+  </g>
+
+  <!-- Clean Bottom Accent Line -->
+  <rect x="0" y="416" width="1200" height="4" fill="url(#text-grad)"/>
+</svg>
