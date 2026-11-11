@@ -13,7 +13,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Cloud-Ediscovery-Legal-Hold-Management/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Cloud-Ediscovery-Legal-Hold-Management?style=for-the-badge&logo=github&color=gold" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Cloud-Ediscovery-Legal-Hold-Management/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Cloud-Ediscovery-Legal-Hold-Management?style=for-the-badge&logo=github&color=gold" alt="GitHub_Stars"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Cloud-Ediscovery-Legal-Hold-Management/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Cloud-Ediscovery-Legal-Hold-Management?style=for-the-badge&logo=github&color=blue" alt="GitHub Forks"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Cloud-Ediscovery-Legal-Hold-Management/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Cloud-Ediscovery-Legal-Hold-Management?style=for-the-badge&logo=github&color=orange" alt="GitHub Issues"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Cloud-Ediscovery-Legal-Hold-Management/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-CC0--1.0-green.svg?style=for-the-badge" alt="License: CC0-1.0"/></a>
@@ -79,9 +79,9 @@ The competitive landscape is **moderately fragmented and actively consolidating*
 
 ## 💻 Open-Source GitHub Projects
 
-*Open-source legaltech tools, digital forensics frameworks, email archival solutions, and document review systems. Ranked in **descending order by GitHub star count**.*
+*Open-source legaltech tools, digital forensics frameworks, email archival solutions, and document review systems. Ranked in **descending order by GitHub Stars_Count**.*
 
-| Project | Star Badge | Focus Area | Description |
+| Project | Stars_Badge | Focus Area | Description |
 |:---|:---:|:---:|:---|
 | **[paperless-ngx](https://github.com/paperless-ngx/paperless-ngx)** | [![Stars](https://img.shields.io/github/stars/paperless-ngx/paperless-ngx?style=social&color=white)](https://github.com/paperless-ngx/paperless-ngx/stargazers) | Document Archiving & OCR | Community-driven document management system with OCR, full-text indexing, metadata tagging, and REST APIs. Widely adopted for indexing evidentiary paper trails and digital matter files. |
 | **[google/timesketch](https://github.com/google/timesketch)** | [![Stars](https://img.shields.io/github/stars/google/timesketch?style=social&color=white)](https://github.com/google/timesketch/stargazers) | Collaborative Timeline Analysis | Open-source collaborative forensic timeline analysis tool built by Google. Uses Elasticsearch/OpenSearch to index chronological ESI evidence, audit trails, and custodian activity logs. |
